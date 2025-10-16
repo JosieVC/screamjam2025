@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7638718962440376939}
   - component: {fileID: 3091890598637129524}
+  - component: {fileID: 4668093957228577934}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -2318915356963905733, guid: 061f6aa029b0bf241a43d491636b8a4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,3 +88,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4668093957228577934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4234790730995284215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 567a60259e86d254e8d75e345d93043f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boltPrefab: {fileID: 3282724814617080204, guid: 6be7bfc4b0be006408516628b9c78f82, type: 3}
+  screwPrefab: {fileID: 3385743031358422062, guid: e9e79dbebfeaac045911a6e61914d719, type: 3}
+  pipePrefab: {fileID: 4823552540508338762, guid: 0c45de352d32a224f941383887a5fb45, type: 3}
+  meshPrefab: {fileID: 3385743031358422062, guid: 395d9433f27e3aa448af8d9b51f40d65, type: 3}
+  chipPrefab: {fileID: 5168108829252370398, guid: 115221c5b8ca6604f86c83986bcb6e9c, type: 3}
+  boltBox: {fileID: -2318915356963905733, guid: 061f6aa029b0bf241a43d491636b8a4f, type: 3}
+  screwBox: {fileID: -7305046072827927105, guid: 847f9a54092ac904b88bb760179afd9e, type: 3}
+  pipeBox: {fileID: 2159061104711484440, guid: 55b2ad736fd3eb94aab2b5152b5abd7e, type: 3}
+  meshBox: {fileID: -3119985522961049422, guid: 4a73d986dbcf94a49a8152b9eff23dc8, type: 3}
+  chipBox: {fileID: 5529689319314292822, guid: 3d1e679743a68ef4fa785ca3dd9a3512, type: 3}
