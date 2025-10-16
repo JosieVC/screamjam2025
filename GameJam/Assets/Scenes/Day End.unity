@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 160840989}
   - component: {fileID: 160840988}
   - component: {fileID: 160840987}
+  - component: {fileID: 160840990}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -322,6 +323,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &160840990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160840986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1 &349337060
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,6 +378,7 @@ GameObject:
   - component: {fileID: 349337063}
   - component: {fileID: 349337062}
   - component: {fileID: 349337061}
+  - component: {fileID: 349337064}
   m_Layer: 0
   m_Name: Day_Counter
   m_TagString: Untagged
@@ -422,6 +468,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &349337064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349337060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79cd053b4c2f76346a7d1fbfd7273dba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DayCounter: {fileID: 0}
 --- !u!1 &516013645
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,6 +578,7 @@ GameObject:
   m_Component:
   - component: {fileID: 540664109}
   - component: {fileID: 540664108}
+  - component: {fileID: 540664110}
   m_Layer: 0
   m_Name: Heart_Checkbox
   m_TagString: Untagged
@@ -596,6 +656,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &540664110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540664107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcb62aa7f5db65a419ce7dce6f2aa744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &773564643
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,6 +678,7 @@ GameObject:
   m_Component:
   - component: {fileID: 773564645}
   - component: {fileID: 773564644}
+  - component: {fileID: 773564646}
   m_Layer: 0
   m_Name: Stomach_Checkbox
   m_TagString: Untagged
@@ -683,6 +756,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &773564646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773564643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcb62aa7f5db65a419ce7dce6f2aa744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &857281235
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,6 +778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 857281237}
   - component: {fileID: 857281236}
+  - component: {fileID: 857281238}
   m_Layer: 0
   m_Name: Lungs_Checkbox
   m_TagString: Untagged
@@ -770,6 +856,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &857281238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857281235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcb62aa7f5db65a419ce7dce6f2aa744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1348057299
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,6 +877,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1348057300}
+  - component: {fileID: 1348057301}
   m_Layer: 0
   m_Name: Day_End_Manager
   m_TagString: Untagged
@@ -801,6 +900,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1348057301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348057299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1c0cdaaa6e1d9c40b00e53085c63b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dayCounterText: {fileID: 349337061}
+  moneyCounterText: {fileID: 2072896264}
+  brainCheckbox: {fileID: 0}
+  heartCheckbox: {fileID: 0}
+  lungsCheckbox: {fileID: 0}
+  stomachCheckbox: {fileID: 0}
+  skinCheckbox: {fileID: 0}
+  newDayButton: {fileID: 0}
 --- !u!1 &1469093257
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,6 +930,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1469093259}
   - component: {fileID: 1469093258}
+  - component: {fileID: 1469093260}
   m_Layer: 0
   m_Name: Skin_Checkbox
   m_TagString: Untagged
@@ -888,6 +1008,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1469093260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469093257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcb62aa7f5db65a419ce7dce6f2aa744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1943409784
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,6 +1030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1943409786}
   - component: {fileID: 1943409785}
+  - component: {fileID: 1943409787}
   m_Layer: 0
   m_Name: Brain_Checkbox
   m_TagString: Untagged
@@ -975,6 +1108,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1943409787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943409784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcb62aa7f5db65a419ce7dce6f2aa744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2072896263
 GameObject:
   m_ObjectHideFlags: 0
