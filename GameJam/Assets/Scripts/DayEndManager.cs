@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class DayEndManager : MonoBehaviour
 {
     [Header("UI References")]
-    public TextMeshProUGUI dayCounterText;
-    public TextMeshProUGUI moneyCounterText;
+    public TextMesh dayCounterText;
+    public TextMesh moneyCounterText;
 
     [Header("Organ Checkboxes")]
     public Toggle brainCheckbox;
