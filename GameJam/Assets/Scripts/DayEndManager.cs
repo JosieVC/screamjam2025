@@ -9,6 +9,15 @@ public class DayEndManager : MonoBehaviour
     public TextMesh dayCounterText;
     public TextMesh moneyCounterText;
 
+    [Header("Organ Costs")]
+    public int brainCost = 10;
+    public int heartCost = 15;
+    public int lungsCost = 12;
+    public int stomachCost = 8;
+    public int skinCost = 5;
+
+    private int earnedMoney = 30; // TEMP VALUE — will replace this with the real value from gameplay later
+
     [Header("Organ Checkboxes")]
     public Toggle brainCheckbox;
     public Toggle heartCheckbox;
