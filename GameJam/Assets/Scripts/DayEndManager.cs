@@ -37,7 +37,8 @@ public class DayEndManager : MonoBehaviour
         organList.stomachCost = stomachCost;
         organList.skinCost = skinCost;
 
-        assemblyManager.money = earnedMoney; // gives the player their earnings to spend
+        assemblyManager.money = assemblyManager.moneyEarnedToday;
+        moneyCounterText.text = $"Money Earned: {assemblyManager.money}"; // gives the player their earnings to spend
 
         // Updates UI
         dayCounterText.text = $"End of Day {currentDay}";
@@ -54,9 +55,10 @@ public class DayEndManager : MonoBehaviour
         newDayButton.onClick.AddListener(OnNextDay);
     }
 
-    private void OnNextDay()
-    {
-        SceneManager.LoadScene("Factory");
-    }
+   private void OnNextDay()
+{
+    sceneManager.day++; // Progress to the next day
+    SceneManager.LoadScene("Factory");
+}
 }
 

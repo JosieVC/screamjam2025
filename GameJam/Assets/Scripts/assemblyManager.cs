@@ -177,4 +177,7 @@ public class assemblyManager : MonoBehaviour
         currentBlueprint.GetComponent<blueprint>().SetBlueprint(organIndex);
         Debug.Log("Pressed organ: " + organIndex);
     }
+
+    public static int moneyEarnedToday; 
+
 }
