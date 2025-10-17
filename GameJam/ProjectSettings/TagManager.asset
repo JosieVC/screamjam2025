@@ -10,6 +10,11 @@ TagManager:
   - chip
   - CB
   - mesh
+  - brain
+  - stomach
+  - lung
+  - heart
+  - skin
   layers:
   - Default
   - TransparentFX

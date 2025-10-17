@@ -43,7 +43,7 @@ public class assemblyManager : MonoBehaviour
         for (int i = 0; i < 5; i++)
         {
             boxes.Add(Instantiate(boxPrefab));
-            boxes[i].GetComponent<box>().AssignBox(i);
+            boxes[i].GetComponent<newBox>().AssignBox(i);
         }
         AddBoxPositions();
         AddButtonPositions();
@@ -52,6 +52,12 @@ public class assemblyManager : MonoBehaviour
         // positions notepads.
         notePadButton.transform.position = buttonStartPos;
         notePad.transform.position = notePadStartPos;
+
+        GameObject.FindGameObjectWithTag("brain").SetActive(false);
+        GameObject.FindGameObjectWithTag("stomach").SetActive(false);
+        GameObject.FindGameObjectWithTag("lung").SetActive(false);
+        GameObject.FindGameObjectWithTag("heart").SetActive(false);
+        GameObject.FindGameObjectWithTag("skin").SetActive(false);
     }
 
     // Update is called once per frame
@@ -61,7 +67,7 @@ public class assemblyManager : MonoBehaviour
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         worldPos.z = 0f;
 
-        if (Input.GetMouseButtonDown(0)) // old system
+        if (Input.GetMouseButtonDown(0))
         {
             // Notepad button
             if (!isNotePadDropped)

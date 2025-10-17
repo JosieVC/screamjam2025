@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8670467433191030683}
   m_Layer: 0
   m_Name: Skin
-  m_TagString: chip
+  m_TagString: skin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,7 +177,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  rBody: {fileID: 8425089405381394365}
   velocity: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
 --- !u!114 &8670467433191030683

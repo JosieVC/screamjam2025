@@ -1,7 +1,7 @@
 using UnityEngine;
-using static UnityEngine.UI.Image;
+using UnityEngine.InputSystem;
 
-public class box : MonoBehaviour
+public class newBox : MonoBehaviour
 {
     [SerializeField]
     private GameObject boltPrefab;
@@ -13,8 +13,6 @@ public class box : MonoBehaviour
     private GameObject meshPrefab;
     [SerializeField]
     private GameObject chipPrefab;
-    [SerializeField]
-    private int num = 0;
 
     [SerializeField]
     private Sprite boltBox;
@@ -27,18 +25,30 @@ public class box : MonoBehaviour
     [SerializeField]
     private Sprite chipBox;
 
+    private Collider2D collider;
     private GameObject part;
+    private int numOfParts;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        AssignBox(num);
+        collider = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            worldPos.z = 0f;
+
+            if (collider.OverlapPoint(worldPos) && numOfParts > 0)
+            {
+                Instantiate(part, worldPos, Quaternion.identity);
+                numOfParts--;
+            }
+        }
     }
 
     /// <summary>
@@ -51,18 +61,33 @@ public class box : MonoBehaviour
         {
             case 0:
                 GetComponent<SpriteRenderer>().sprite = boltBox;
+                part = boltPrefab;
+                gameObject.tag = "bolt";
+                numOfParts = partsManager.boltCount;
                 break;
             case 1:
                 GetComponent<SpriteRenderer>().sprite = screwBox;
+                part = screwPrefab;
+                gameObject.tag = "screw";
+                numOfParts = partsManager.screwCount;
                 break;
             case 2:
                 GetComponent<SpriteRenderer>().sprite = pipeBox;
+                part = pipePrefab;
+                gameObject.tag = "pipe";
+                numOfParts = partsManager.pipeCount;
                 break;
             case 3:
                 GetComponent<SpriteRenderer>().sprite = meshBox;
+                part = meshPrefab;
+                gameObject.tag = "mesh";
+                numOfParts = partsManager.meshCount;
                 break;
             case 4:
                 GetComponent<SpriteRenderer>().sprite = chipBox;
+                part = chipPrefab;
+                gameObject.tag = "chip";
+                numOfParts = partsManager.chipCount;
                 break;
         }
     }

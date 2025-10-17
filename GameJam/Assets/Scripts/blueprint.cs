@@ -14,17 +14,6 @@ public class blueprint : MonoBehaviour
     [SerializeField]
     private Sprite heartBPPrefab;
 
-    [SerializeField]
-    private GameObject brain;
-    [SerializeField]
-    private GameObject stomach;
-    [SerializeField]
-    private GameObject lungs;
-    [SerializeField]
-    private GameObject skin;
-    [SerializeField]
-    private GameObject heart;
-
     private GameObject organ;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -51,28 +40,57 @@ public class blueprint : MonoBehaviour
     /// <param name="num"></param>
     public void SetBlueprint(int num)
     {
+        if (organ != null)
+        {
+            organ.SetActive(false);
+        }
         switch (num)
         {
             case 0:
                 GetComponent<SpriteRenderer>().sprite = brainBPPrefab;
-                //organ = brain;
+                organ = FindInactiveByTag("brain");
                 break;
             case 1:
                 GetComponent<SpriteRenderer>().sprite = stomachBPPrefab;
-                //organ = stomach;
+                organ = FindInactiveByTag("stomach");
                 break;
             case 2:
                 GetComponent<SpriteRenderer>().sprite = lungsBPPrefab;
-                //organ = lungs;
+                organ = FindInactiveByTag("lung");
                 break;
             case 3:
                 GetComponent<SpriteRenderer>().sprite = skinBPPrefab;
-                //organ = skin;
+                organ = FindInactiveByTag("skin");
                 break;
             case 4:
                 GetComponent<SpriteRenderer>().sprite = heartBPPrefab;
-                //organ = heart;
+                organ = FindInactiveByTag("heart");
                 break;
         }
+
+        if (organ != null)
+        {
+            organ.SetActive(true);
+            Debug.Log($"Activated organ: {organ.name}");
+        }
+        else
+        {
+            Debug.LogWarning("No GameObject found with the expected tag!");
+        }
+    }
+
+    /// <summary>
+    /// Finds inactive tag.
+    /// </summary>
+    /// <param name="tag"></param>
+    /// <returns></returns>
+    private GameObject FindInactiveByTag(string tag)
+    {
+        foreach (GameObject obj in Resources.FindObjectsOfTypeAll<GameObject>())
+        {
+            if (obj.CompareTag(tag))
+                return obj;
+        }
+        return null;
     }
 }

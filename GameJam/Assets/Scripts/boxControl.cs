@@ -3,8 +3,8 @@ using UnityEngine;
 public class boxControl : MonoBehaviour
 {
     //determines which part the box accepts
-    //1 is bolt, 2 is screw, 3 is pipe, 4 is chip
-    [SerializeField, Range(1, 4)]
+    //1 is bolt, 2 is screw, 3 is pipe, 4 is chip, 5 is mesh
+    [SerializeField, Range(1, 5)]
     private int boxNum;
 
 

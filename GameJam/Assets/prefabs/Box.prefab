@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7638718962440376939}
   - component: {fileID: 3091890598637129524}
-  - component: {fileID: 4668093957228577934}
+  - component: {fileID: 2372365783573950160}
+  - component: {fileID: 833497309358263124}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -88,7 +89,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4668093957228577934
+--- !u!114 &2372365783573950160
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,7 +98,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4234790730995284215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 567a60259e86d254e8d75e345d93043f, type: 3}
+  m_Script: {fileID: 11500000, guid: dc565e50865d1194db0df6c9d1e01fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   boltPrefab: {fileID: 3282724814617080204, guid: 6be7bfc4b0be006408516628b9c78f82, type: 3}
@@ -110,3 +111,49 @@ MonoBehaviour:
   pipeBox: {fileID: 2159061104711484440, guid: 55b2ad736fd3eb94aab2b5152b5abd7e, type: 3}
   meshBox: {fileID: -3119985522961049422, guid: 4a73d986dbcf94a49a8152b9eff23dc8, type: 3}
   chipBox: {fileID: 5529689319314292822, guid: 3d1e679743a68ef4fa785ca3dd9a3512, type: 3}
+--- !u!61 &833497309358263124
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4234790730995284215}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.19}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.92, y: 0.73}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.88, y: 0.29}
+  m_EdgeRadius: 0

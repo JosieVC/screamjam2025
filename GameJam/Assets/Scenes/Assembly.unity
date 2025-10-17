@@ -397,15 +397,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2740539539188078679, guid: 077d46b507141474b8feecfda088d5e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.03
+      value: 3.05
       objectReference: {fileID: 0}
     - target: {fileID: 2740539539188078679, guid: 077d46b507141474b8feecfda088d5e8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.05
+      value: -1.74
       objectReference: {fileID: 0}
     - target: {fileID: 2740539539188078679, guid: 077d46b507141474b8feecfda088d5e8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2740539539188078679, guid: 077d46b507141474b8feecfda088d5e8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -439,7 +439,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brain
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -4043963581151742853, guid: 077d46b507141474b8feecfda088d5e8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -603,15 +604,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2740539539188078679, guid: 3a7694b0051964f4ab318d751783aebe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.9699998
+      value: 3.44
       objectReference: {fileID: 0}
     - target: {fileID: 2740539539188078679, guid: 3a7694b0051964f4ab318d751783aebe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.74
+      value: -1.99
       objectReference: {fileID: 0}
     - target: {fileID: 2740539539188078679, guid: 3a7694b0051964f4ab318d751783aebe, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2740539539188078679, guid: 3a7694b0051964f4ab318d751783aebe, type: 3}
       propertyPath: m_LocalRotation.w
@@ -645,7 +646,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stomach
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -4043963581151742853, guid: 3a7694b0051964f4ab318d751783aebe, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -672,15 +674,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2740539539188078679, guid: 7ef9c43ffa9312d4782c08de9864d21b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.8899999
+      value: 3.3899999
       objectReference: {fileID: 0}
     - target: {fileID: 2740539539188078679, guid: 7ef9c43ffa9312d4782c08de9864d21b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.150001
+      value: -1.89
       objectReference: {fileID: 0}
     - target: {fileID: 2740539539188078679, guid: 7ef9c43ffa9312d4782c08de9864d21b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2740539539188078679, guid: 7ef9c43ffa9312d4782c08de9864d21b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -714,7 +716,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skin
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -4043963581151742853, guid: 7ef9c43ffa9312d4782c08de9864d21b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -741,15 +744,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2740539539188078679, guid: 2199d692b5d4a0c498580de864ab9796, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.03
+      value: 3.18
       objectReference: {fileID: 0}
     - target: {fileID: 2740539539188078679, guid: 2199d692b5d4a0c498580de864ab9796, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.9800005
+      value: -1.71
       objectReference: {fileID: 0}
     - target: {fileID: 2740539539188078679, guid: 2199d692b5d4a0c498580de864ab9796, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2740539539188078679, guid: 2199d692b5d4a0c498580de864ab9796, type: 3}
       propertyPath: m_LocalRotation.w
@@ -783,7 +786,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heart
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -4043963581151742853, guid: 2199d692b5d4a0c498580de864ab9796, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -959,15 +963,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2740539539188078679, guid: d0a84a651d958b24c872ee98f885e234, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.08
+      value: 2.87
       objectReference: {fileID: 0}
     - target: {fileID: 2740539539188078679, guid: d0a84a651d958b24c872ee98f885e234, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.26
+      value: -1.6400003
       objectReference: {fileID: 0}
     - target: {fileID: 2740539539188078679, guid: d0a84a651d958b24c872ee98f885e234, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2740539539188078679, guid: d0a84a651d958b24c872ee98f885e234, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1001,7 +1005,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lungs
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -4043963581151742853, guid: d0a84a651d958b24c872ee98f885e234, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
