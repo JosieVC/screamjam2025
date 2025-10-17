@@ -65,4 +65,7 @@ public class checkbox : MonoBehaviour
             case "Heart": return organList.heartCost;
             case "Lungs": return organList.lungCost;
             case "Stomach":
-                return organList.stomachCo
+                return organList.stomachCo;
+        }
+    }
+}

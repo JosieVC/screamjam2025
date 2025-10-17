@@ -20,6 +20,8 @@ public class playerControl : MonoBehaviour
 
     public static int aliveOrgans;
 
+    public static bool brainFailing;
+
     public static bool heartFailing;
 
     public static bool lungsFailing;
@@ -32,7 +34,7 @@ public class playerControl : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+            aliveOrgans = 5;
     }
 
     // Update is called once per frame

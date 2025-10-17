@@ -1,5 +1,4 @@
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -16,7 +15,7 @@ public class DayEndManager : MonoBehaviour
     public int stomachCost = 8;
     public int skinCost = 5;
 
-    private int earnedMoney = 30; // TEMP VALUE — will replace this with the real value from gameplay later
+    private int earnedMoney = 30; // TEMP — replace with actual gameplay value later
 
     [Header("Organ Checkboxes")]
     public Toggle brainCheckbox;
@@ -29,28 +28,35 @@ public class DayEndManager : MonoBehaviour
 
     private void Start()
     {
-        // Example values (replace these with actual game data)
-        int currentDay = 1;  // can get this from our dayCounter script later
-        int earnedMoney = 0; // can connect this to our player or manager script
+        int currentDay = 1; // Will later be pulled from another script
 
-        // Update UI
+        // Assigns values for other scripts
+        organList.brainCost = brainCost;
+        organList.heartCost = heartCost;
+        organList.lungCost = lungsCost;
+        organList.stomachCost = stomachCost;
+        organList.skinCost = skinCost;
+
+        assemblyManager.money = earnedMoney; // gives the player their earnings to spend
+
+        // Updates UI
         dayCounterText.text = $"End of Day {currentDay}";
         moneyCounterText.text = $"Money Earned: {earnedMoney}";
 
-        // Checkboxes start all ON
+        // Initializes all checkboxes ON
         brainCheckbox.isOn = true;
         heartCheckbox.isOn = true;
         lungsCheckbox.isOn = true;
         stomachCheckbox.isOn = true;
         skinCheckbox.isOn = true;
 
-        // When player clicks "Next Day"
+        // Adds button listener
         newDayButton.onClick.AddListener(OnNextDay);
     }
 
     private void OnNextDay()
     {
-        // When pressed, loads next scene (replace name below)
         SceneManager.LoadScene("Factory");
     }
 }
+
