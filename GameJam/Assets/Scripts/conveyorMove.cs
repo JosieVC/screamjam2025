@@ -5,9 +5,6 @@ public class conveyorMove : MonoBehaviour
     //speed at which objects move
     [SerializeField]
     private int speed = 5;
-
-    //rigidbody to move
-    [SerializeField]
     private Rigidbody2D rBody;
 
     [SerializeField]
@@ -25,7 +22,7 @@ public class conveyorMove : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        rBody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame

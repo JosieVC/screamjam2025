@@ -8,6 +8,8 @@ TagManager:
   - screw
   - pipe
   - chip
+  - CB
+  - mesh
   layers:
   - Default
   - TransparentFX

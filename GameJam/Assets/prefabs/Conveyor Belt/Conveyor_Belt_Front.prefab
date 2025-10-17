@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 967199646598768177}
   - component: {fileID: 129713697980049934}
-  - component: {fileID: 8005574217120333912}
   m_Layer: 0
   m_Name: Conveyor_Belt_Front
   m_TagString: Untagged
@@ -27,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 7076346359557313278}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: -0.1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.05, y: -4.14, z: 2}
+  m_LocalScale: {x: 17.05, y: 11.67, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6497809285126090134, guid: bc973a924ab8f9f449cfbcdc78da2d86, type: 3}
+  m_Sprite: {fileID: 4599170738438942207, guid: c6ba1bf25c02612439de60c925c3fc03, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -88,19 +87,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8005574217120333912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7076346359557313278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4891bbde4a415940950e032a0a36f2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  rBody: {fileID: 0}
-  velocity: {x: 0, y: 0, z: 0}
-  position: {x: 0, y: 0, z: 0}

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1735262176708168103}
   m_Layer: 0
   m_Name: Mesh
-  m_TagString: screw
+  m_TagString: mesh
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 3385743031358422062}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.61, y: 1.09, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -9.61, y: 1.09, z: 3}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -161,7 +161,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.44, y: 0.49}
+  m_Size: {x: 0.86, y: 0.86}
   m_EdgeRadius: 0
 --- !u!114 &1735262176708168103
 MonoBehaviour:
@@ -176,6 +176,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  rBody: {fileID: -7472097520398188935}
   velocity: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}

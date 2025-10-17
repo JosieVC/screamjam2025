@@ -37,6 +37,7 @@ public class assemblyManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Screen.SetResolution(2560, 1600, 0);
         // Adds a list of boxes.
         boxes = new List<GameObject>();
         for (int i = 0; i < 5; i++)

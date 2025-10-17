@@ -51,6 +51,12 @@ public class boxControl : MonoBehaviour
                     partsManager.chipCount++;
                 }
                 break;
+            case 5:
+                if (incomingPart.tag == "mesh")
+                {
+                    partsManager.meshCount++;
+                }
+                break;
             default:
                 break;
         }

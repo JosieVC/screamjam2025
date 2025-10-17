@@ -9,7 +9,7 @@ public class sceneSwitcher : MonoBehaviour
 
     private Collider2D col;
 
-    void Awake()
+    void Start()
     {
         col = GetComponent<Collider2D>();
         if (col == null)

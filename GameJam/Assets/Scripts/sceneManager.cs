@@ -6,22 +6,28 @@ using UnityEngine.SceneManagement;
 public class sceneManager : MonoBehaviour
 {
     [SerializeField]
-    TextMesh QuotaText;
+    private TextMesh QuotaText;
 
     [SerializeField]
-    TextMesh TimerText;
+    private TextMesh TimerText;
 
     [SerializeField]
-    TextMesh recipeText;
+    private TextMesh recipeText;
 
     [SerializeField]
-    TextMesh partsText;
+    private TextMesh partsText;
 
+    [SerializeField]
+    private GameObject cbPrefab;
+
+    [SerializeField]
+    private float timeGap;
+    private float newTime;
     public static int day;
+    private List<GameObject> cbParts;
+    private bool isGenerated;
 
-    bool isGenerated;
-
-    double timer;
+    private float timer;
 
     enum QuotaType
     {
@@ -50,8 +56,12 @@ public class sceneManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Screen.SetResolution(2560, 1600, 0);
         timer = 300;
+        newTime = 300;
         day = 1;
+        cbParts = new List<GameObject>();
+        FindAllCB();
     }
 
     // Update is called once per frame
@@ -60,6 +70,12 @@ public class sceneManager : MonoBehaviour
         TimerText.text = timer.ToString("F2");
 
         timer -= Time.deltaTime;
+
+        if (newTime - timer >= timeGap)
+        {
+            newTime = timer;
+            SpawnCB();
+        }
 
         if(isGenerated == false)
         {
@@ -72,9 +88,14 @@ public class sceneManager : MonoBehaviour
         if(timer < 0)
         {
             SceneManager.LoadScene("Day End");
-
+            newTime = timer;
             timer = 300;
             isGenerated = false;
+        }
+
+        if (cbParts.Count > 6)
+        {
+            Destroy(cbParts[0]);
         }
 
     }
@@ -168,6 +189,29 @@ public class sceneManager : MonoBehaviour
                 brainRecipe + "\n" +
                 lungRecipe + "\n" +
                 skinRecipe;
+        }
+    }
+
+    /// <summary>
+    /// Spawns new converyor belt section.
+    /// </summary>
+    private void SpawnCB()
+    {
+        GameObject newCB = Instantiate(cbPrefab, new Vector3(-13.66f, -2.83f, 4f), Quaternion.identity);
+        cbParts.Add(newCB);
+    }
+
+    /// <summary>
+    /// Finds all the conveyor belt parts.
+    /// </summary>
+    private void FindAllCB()
+    {
+        cbParts.Clear(); // clear old references first
+        GameObject[] foundParts = GameObject.FindGameObjectsWithTag("CB");
+
+        foreach (GameObject part in foundParts)
+        {
+            cbParts.Add(part);
         }
     }
 }

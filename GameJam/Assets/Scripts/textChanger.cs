@@ -29,5 +29,9 @@ public class textChanger : MonoBehaviour
         {
             textMesh.text = "Chips: " + partsManager.chipCount.ToString();
         }
+        if (textMesh.tag == "mesh")
+        {
+            textMesh.text = "Mesh: " + partsManager.meshCount.ToString();
+        }
     }
 }

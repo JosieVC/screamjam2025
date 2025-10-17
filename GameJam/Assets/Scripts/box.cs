@@ -13,6 +13,8 @@ public class box : MonoBehaviour
     private GameObject meshPrefab;
     [SerializeField]
     private GameObject chipPrefab;
+    [SerializeField]
+    private int num = 0;
 
     [SerializeField]
     private Sprite boltBox;
@@ -30,7 +32,7 @@ public class box : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        AssignBox(num);
     }
 
     // Update is called once per frame

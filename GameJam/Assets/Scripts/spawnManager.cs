@@ -11,6 +11,8 @@ public class spawnManager : MonoBehaviour
     private GameObject pipe;
     [SerializeField]
     private GameObject chip;
+    [SerializeField]
+    private GameObject mesh;
     //the location parts will spawn at - should be left side of screen
     [SerializeField]
     private Vector2 spawnLoc;
@@ -47,7 +49,7 @@ public class spawnManager : MonoBehaviour
     void GenerateSpawnObject()
     {
         //picks which object will be spawned
-        int spawnNum = Random.Range(0, 4);
+        int spawnNum = Random.Range(0, 5);
         
         //sets currentSpawn to appropriate prefab
         switch (spawnNum)
@@ -63,6 +65,9 @@ public class spawnManager : MonoBehaviour
                 break;
             case 3:
                 currentSpawn = chip;
+                break;
+            case 4:
+                currentSpawn = mesh;
                 break;
             default:
                 break;
