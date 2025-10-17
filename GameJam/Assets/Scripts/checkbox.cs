@@ -62,9 +62,9 @@ public class checkbox : MonoBehaviour
     {
         switch (organName)
         {
-            case "Brain": playerControl.brainFailing = failing; break;
+            //case "Brain": playerControl.brainFailing = failing; break;
             case "Heart": playerControl.heartFailing = failing; break;
-            case "Lungs": playerControl.lungFailing = failing; break;
+            //case "Lungs": playerControl.lungFailing = failing; break;
             case "Stomach": playerControl.stomachFailing = failing; break;
             case "Skin": playerControl.skinFailing = failing; break;
         }
