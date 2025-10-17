@@ -22,30 +22,6 @@ public class checkbox : MonoBehaviour
             Debug.LogError("No Toggle component found on: " + gameObject.name);
         }
 
-        void SetOrganState(bool failing)
-        {
-            switch (organName)
-            {
-                case "Brain":
-                    playerControl.brainFailing = failing;
-                    break;
-                case "Heart":
-                    playerControl.heartFailing = failing;
-                    break;
-                case "Lungs":
-                    playerControl.lungsFailing = failing;
-                    break;
-                case "Stomach":
-                    playerControl.stomachFailing = failing;
-                    break;
-                case "Skin":
-                    playerControl.skinFailing = failing;
-                    break;
-                default:
-                    Debug.LogWarning("Unknown organ name in SetOrganState: " + organName);
-                    return;
-            }
-
             // Adjust aliveOrgans count
             if (failing)
             {
@@ -109,4 +85,28 @@ public class checkbox : MonoBehaviour
                 return 0;
         }
     }
+    
+    void SetOrganState(bool failing)
+        {
+    switch (organName)
+    {
+        case "Brain":
+            playerControl.brainFailing = failing;
+            break;
+        case "Heart":
+            playerControl.heartFailing = failing;
+            break;
+        case "Lungs":
+            playerControl.lungsFailing = failing;
+            break;
+        case "Stomach":
+            playerControl.stomachFailing = failing;
+            break;
+        case "Skin":
+            playerControl.skinFailing = failing;
+            break;
+        default:
+            Debug.LogWarning("Unknown organ name in SetOrganState: " + organName);
+            return;
+    }       
 }
