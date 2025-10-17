@@ -27,13 +27,7 @@ public class checkbox : MonoBehaviour
         }
     }
 
-
-
-        // Initialize toggle state
-        toggle.isOn == true;
-        SetOrganState(false); // Organ is working by default
-        isInitialized = true;
-    }
+    
 
     void OnToggleChanged(bool isOn)
     {
@@ -78,28 +72,29 @@ public class checkbox : MonoBehaviour
                 return 0;
         }
     }
-    
+
     void SetOrganState(bool failing)
-        {
-    switch (organName)
     {
-        case "Brain":
-            playerControl.brainFailing = failing;
-            break;
-        case "Heart":
-            playerControl.heartFailing = failing;
-            break;
-        case "Lungs":
-            playerControl.lungsFailing = failing;
-            break;
-        case "Stomach":
-            playerControl.stomachFailing = failing;
-            break;
-        case "Skin":
-            playerControl.skinFailing = failing;
-            break;
-        default:
-            Debug.LogWarning("Unknown organ name in SetOrganState: " + organName);
-            return;
-    }       
+        switch (organName)
+        {
+            case "Brain":
+                playerControl.brainFailing = failing;
+                break;
+            case "Heart":
+                playerControl.heartFailing = failing;
+                break;
+            case "Lungs":
+                playerControl.lungsFailing = failing;
+                break;
+            case "Stomach":
+                playerControl.stomachFailing = failing;
+                break;
+            case "Skin":
+                playerControl.skinFailing = failing;
+                break;
+            default:
+                Debug.LogWarning("Unknown organ name in SetOrganState: " + organName);
+                return;
+        }
+    }
 }
