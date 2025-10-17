@@ -56,7 +56,7 @@ public class player : MonoBehaviour
             sr.sprite = grab;
             isGrabbing = true;
         }
-        else if (context.canceled)
+        else if (context.phase == InputActionPhase.Canceled)
         {
             sr.sprite = relaxed;
             isGrabbing = false;
