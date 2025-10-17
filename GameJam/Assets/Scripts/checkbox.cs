@@ -16,28 +16,21 @@ public class checkbox : MonoBehaviour
         if (toggle != null)
         {
             toggle.onValueChanged.AddListener(OnToggleChanged);
+
+            toggle.isOn = true;
+            SetOrganState(false); // Organ is working by default
+            isInitialized = true;
         }
         else
         {
             Debug.LogError("No Toggle component found on: " + gameObject.name);
         }
+    }
 
-            // Adjust aliveOrgans count
-            if (failing)
-            {
-                if (playerControl.aliveOrgans > 0)
-                    playerControl.aliveOrgans--;
-            }
-            else
-            {
-                if (playerControl.aliveOrgans < 5)
-                    playerControl.aliveOrgans++;
-            }
-        }
 
 
         // Initialize toggle state
-        toggle.isOn = true;
+        toggle.isOn == true;
         SetOrganState(false); // Organ is working by default
         isInitialized = true;
     }
