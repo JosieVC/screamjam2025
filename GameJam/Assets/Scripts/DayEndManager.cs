@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro; 
 
 public class DayEndManager : MonoBehaviour
 {
@@ -15,8 +16,6 @@ public class DayEndManager : MonoBehaviour
     public int stomachCost = 8;
     public int skinCost = 5;
 
-    private int earnedMoney = 30; // TEMP — replace with actual gameplay value later
-
     [Header("Organ Checkboxes")]
     public Toggle brainCheckbox;
     public Toggle heartCheckbox;
@@ -24,41 +23,58 @@ public class DayEndManager : MonoBehaviour
     public Toggle stomachCheckbox;
     public Toggle skinCheckbox;
 
+    [Header("Organ Labels")]
+    public TMP_Text brainLabel;
+    public TMP_Text heartLabel;
+    public TMP_Text lungsLabel;
+    public TMP_Text stomachLabel;
+    public TMP_Text skinLabel;
+
+    [Header("UI Buttons")]
     public Button newDayButton;
 
     private void Start()
     {
-        int currentDay = 1; // Will later be pulled from another script
+        int currentDay = sceneManager.day;
 
-        // Assigns values for other scripts
+        // Assign costs for use by other scripts
         organList.brainCost = brainCost;
         organList.heartCost = heartCost;
         organList.lungCost = lungsCost;
         organList.stomachCost = stomachCost;
         organList.skinCost = skinCost;
 
-        assemblyManager.money = assemblyManager.moneyEarnedToday;
-        moneyCounterText.text = $"Money Earned: {assemblyManager.money}"; // gives the player their earnings to spend
+        // Set player's money for spending
+        // This should ideally be the real value earned from the gameplay
+        assemblyManager.money = 30; // TEMP VALUE
 
-        // Updates UI
+        // Update UI text
         dayCounterText.text = $"End of Day {currentDay}";
-        moneyCounterText.text = $"Money Earned: {earnedMoney}";
+        moneyCounterText.text = $"Money Earned: {assemblyManager.money}";
 
-        // Initializes all checkboxes ON
+        // Update label texts with names and costs
+        brainLabel.text = $"Brain (${brainCost})";
+        heartLabel.text = $"Heart (${heartCost})";
+        lungsLabel.text = $"Lungs (${lungsCost})";
+        stomachLabel.text = $"Stomach (${stomachCost})";
+        skinLabel.text = $"Skin (${skinCost})";
+
+        // Set all checkboxes on by default
         brainCheckbox.isOn = true;
         heartCheckbox.isOn = true;
         lungsCheckbox.isOn = true;
         stomachCheckbox.isOn = true;
         skinCheckbox.isOn = true;
 
-        // Adds button listener
+        // Button listener to proceed to next day
         newDayButton.onClick.AddListener(OnNextDay);
     }
 
-   private void OnNextDay()
-{
-    sceneManager.day++; // Progress to the next day
-    SceneManager.LoadScene("Factory");
+    private void OnNextDay()
+    {
+        sceneManager.day++;
+        SceneManager.LoadScene("Factory");
+    }
 }
-}
+
 
