@@ -1,25 +1,100 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class checkbox : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [Header("Set this in Inspector")]
+    public string organName; // Example: "Brain", "Heart"
+
+    private Toggle toggle;
+    private bool isInitialized = false; // To prevent counting aliveOrgans multiple times
+
     void Start()
     {
-        
+        toggle = GetComponent<Toggle>();
+
+        if (toggle != null)
+        {
+            toggle.onValueChanged.AddListener(OnToggleChanged);
+
+            toggle.isOn = true;
+            SetOrganState(false); // Organ is working by default
+            isInitialized = true;
+        }
+        else
+        {
+            Debug.LogError("No Toggle component found on: " + gameObject.name);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    
+
+    void OnToggleChanged(bool isOn)
     {
-        
+        if (!isInitialized) return;
+
+        int organCost = GetOrganCost();
+
+        if (isOn)
+        {
+            // Trying to activate organ — check if we can afford it
+            if (assemblyManager.money >= organCost)
+            {
+                assemblyManager.money -= organCost;
+                SetOrganState(false); // Organ is working
+                Debug.Log($"{organName} activated. Remaining money: {assemblyManager.money}");
+            }
+            else
+            {
+                toggle.isOn = false; // Can't afford — revert
+                Debug.Log("Not enough money to activate this organ!");
+            }
+        }
+        else
+        {
+            // Deactivate organ
+            SetOrganState(true); // Organ is failing
+            Debug.Log($"{organName} deactivated.");
+        }
     }
 
-    void ActivateCheckbox()
+    int GetOrganCost()
     {
-        //check for collision with checkbox
-        //if mouse is in the right location, activate or deactivate the checkbox
-        //if the checkbox is deactivated, mark that organ as deactivated (use playerControl.organFailing = true and playerControl.aliveOrgans--)
-        //if the checkbox is activated, subtract money according to the cost of the organ (assemblyManager.money and organList.organCost (for the respective organ)
-        //if that organ was deactivated, reactivate it
+        switch (organName)
+        {
+            case "Brain": return organList.brainCost;
+            case "Heart": return organList.heartCost;
+            case "Lungs": return organList.lungCost;
+            case "Stomach": return organList.stomachCost; 
+            case "Skin": return organList.skinCost;       
+            default:
+                Debug.LogWarning("Unknown organ name: " + organName);
+                return 0;
+        }
+    }
+
+    void SetOrganState(bool failing)
+    {
+        switch (organName)
+        {
+            case "Brain":
+                playerControl.brainFailing = failing;
+                break;
+            case "Heart":
+                playerControl.heartFailing = failing;
+                break;
+            case "Lungs":
+                playerControl.lungsFailing = failing;
+                break;
+            case "Stomach":
+                playerControl.stomachFailing = failing;
+                break;
+            case "Skin":
+                playerControl.skinFailing = failing;
+                break;
+            default:
+                Debug.LogWarning("Unknown organ name in SetOrganState: " + organName);
+                return;
+        }
     }
 }
