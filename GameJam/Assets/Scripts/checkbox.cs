@@ -1,12 +1,13 @@
 using UnityEngine;
-using UnityEngine.UI; // Required for Toggle
-using TMPro; // Optional if you want to update label text
+using UnityEngine.UI;
 
 public class checkbox : MonoBehaviour
 {
-    public string organName; // Set this in the Inspector (e.g. "Brain", "Heart")
+    [Header("Set this in Inspector")]
+    public string organName; // Example: "Brain", "Heart"
 
     private Toggle toggle;
+    private bool isInitialized = false; // To prevent counting aliveOrgans multiple times
 
     void Start()
     {
@@ -16,10 +17,21 @@ public class checkbox : MonoBehaviour
         {
             toggle.onValueChanged.AddListener(OnToggleChanged);
         }
+        else
+        {
+            Debug.LogError("No Toggle component found on: " + gameObject.name);
+        }
+
+        // Initialize toggle state
+        toggle.isOn = true;
+        SetOrganState(false); // Organ is working by default
+        isInitialized = true;
     }
 
     void OnToggleChanged(bool isOn)
     {
+        if (!isInitialized) return;
+
         int organCost = GetOrganCost();
 
         if (isOn)
@@ -28,7 +40,7 @@ public class checkbox : MonoBehaviour
             if (assemblyManager.money >= organCost)
             {
                 assemblyManager.money -= organCost;
-                SetOrganState(false); // Organ is now working
+                SetOrganState(false); // Organ is working
                 Debug.Log($"{organName} activated. Remaining money: {assemblyManager.money}");
             }
             else
@@ -40,7 +52,7 @@ public class checkbox : MonoBehaviour
         else
         {
             // Deactivate organ
-            SetOrganState(true); // Organ is now failing
+            SetOrganState(true); // Organ is failing
             Debug.Log($"{organName} deactivated.");
         }
     }
@@ -52,24 +64,5 @@ public class checkbox : MonoBehaviour
             case "Brain": return organList.brainCost;
             case "Heart": return organList.heartCost;
             case "Lungs": return organList.lungCost;
-            case "Stomach": return organList.stomachCost;
-            case "Skin": return organList.skinCost;
-            default: return 0;
-        }
-    }
-
-    void SetOrganState(bool failing)
-    {
-        switch (organName)
-        {
-            //case "Brain": playerControl.brainFailing = failing; break;
-            case "Heart": playerControl.heartFailing = failing; break;
-            //case "Lungs": playerControl.lungFailing = failing; break;
-            case "Stomach": playerControl.stomachFailing = failing; break;
-            case "Skin": playerControl.skinFailing = failing; break;
-        }
-
-        playerControl.aliveOrgans += failing ? -1 : 1;
-    }
-}
-
+            case "Stomach":
+                return organList.stomachCo
