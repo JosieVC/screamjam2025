@@ -6,8 +6,10 @@ public class player : MonoBehaviour
     [SerializeField] private Sprite relaxed;
     [SerializeField] private Sprite grab;
 
+    [SerializeField]
+    private float maxY;
+
     private SpriteRenderer sr;
-    private float maxY = -1f;
 
     private bool isGrabbing = false;
 
