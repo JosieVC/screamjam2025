@@ -4,25 +4,35 @@ using UnityEngine.SceneManagement;
 public class sceneSwitcher : MonoBehaviour
 
 {
-    private Vector2 mousePosition;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private string sceneA = "Assembly";
+    [SerializeField] private string sceneB = "Factory";
+
+    private Collider2D col;
+
+    void Awake()
     {
-        
+        col = GetComponent<Collider2D>();
+        if (col == null)
+        {
+            Debug.LogError("ToggleSceneButton requires a 2D Collider!");
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (Input.GetMouseButtonDown(0) && mousePosition.x > 6 && mousePosition.x < 10 && mousePosition.y > -3.8 && mousePosition.y < -2.5)
+        if (Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene("Assembly");
-        }
-        else if (SceneManager.GetActiveScene().name == "Assembly" && 
-            Input.GetMouseButtonDown(0) && mousePosition.x > -3.8 && mousePosition.x < -0.2 && mousePosition.y > -4.5 && mousePosition.y < -3.6)
-        {
-            SceneManager.LoadScene("Factory");
+            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mouseWorldPos.z = 0f;
+
+            if (col != null && col.OverlapPoint(mouseWorldPos))
+            {
+                string currentScene = SceneManager.GetActiveScene().name;
+                if (currentScene == sceneA)
+                    SceneManager.LoadScene(sceneB);
+                else if (currentScene == sceneB)
+                    SceneManager.LoadScene(sceneA);
+            }
         }
     }
 }

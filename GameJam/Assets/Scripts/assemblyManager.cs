@@ -37,7 +37,6 @@ public class assemblyManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentBlueprint = Instantiate(blueprintPrefab, new Vector3(4f, -2.54f, 4f), Quaternion.identity);
         // Adds a list of boxes.
         boxes = new List<GameObject>();
         for (int i = 0; i < 5; i++)
@@ -126,12 +125,12 @@ public class assemblyManager : MonoBehaviour
     /// </summary>
     private void AddButtonPositions()
     {
-        buttonPositions = new List<Vector3>();
-        buttonPositions.Add(new Vector3(3.9f, 2.67f, 1f));
-        buttonPositions.Add(new Vector3(8.21f, 2.5f, 1f));
-        buttonPositions.Add(new Vector3(4.2f, -1.6f, 1f));
-        buttonPositions.Add(new Vector3(6.27f, 0.24f, 1f));
-        buttonPositions.Add(new Vector3(8.52f, -1.63f, 1f));
+        buttonPositions = new List<Vector3>(); 
+        buttonPositions.Add(new Vector3(4.07f, 2.5f, 1f)); 
+        buttonPositions.Add(new Vector3(8.04f, 2.42f, 1f)); 
+        buttonPositions.Add(new Vector3(4.19f, -0.71f, 1f)); 
+        buttonPositions.Add(new Vector3(6.3f, -3.72f, 1f)); 
+        buttonPositions.Add(new Vector3(8.15f, -0.97f, 1f)); 
         buttonPositions.Add(new Vector3(28f, 28f, 1f));
     }
     
@@ -170,6 +169,10 @@ public class assemblyManager : MonoBehaviour
         PullUpButtons();
         isNotePadDropped = false;
 
+        if (currentBlueprint == null)
+        {
+            currentBlueprint = Instantiate(blueprintPrefab, new Vector3(4f, -2.54f, 4f), Quaternion.identity);
+        }
         // Set the blueprint to the correct organ
         currentBlueprint.GetComponent<blueprint>().SetBlueprint(organIndex);
         Debug.Log("Pressed organ: " + organIndex);
