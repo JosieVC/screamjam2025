@@ -96,5 +96,21 @@ public class checkbox : MonoBehaviour
                 Debug.LogWarning("Unknown organ name in SetOrganState: " + organName);
                 return;
         }
+        // Update alive organ count
+        UpdateAliveOrgans();
     }
+
+    void UpdateAliveOrgans()
+    {
+        int alive = 0;
+        if (!playerControl.brainFailing) alive++;
+        if (!playerControl.heartFailing) alive++;
+        if (!playerControl.lungsFailing) alive++;
+        if (!playerControl.stomachFailing) alive++;
+        if (!playerControl.skinFailing) alive++;
+
+        playerControl.aliveOrgans = alive;
+    }
+
+
 }
