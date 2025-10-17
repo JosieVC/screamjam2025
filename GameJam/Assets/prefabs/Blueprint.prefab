@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6119111312291346989}
   - component: {fileID: 334995311157887085}
+  - component: {fileID: 6576032818697787862}
+  - component: {fileID: -471311865446099475}
   m_Layer: 0
   m_Name: Blueprint
   m_TagString: Untagged
@@ -87,3 +89,71 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6576032818697787862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656536476824285404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80c60a989b4fe254ca486742fa03a7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brainBPPrefab: {fileID: 4674987233023956360, guid: 71bf8db60d885cf45a894ae2db0c955c, type: 3}
+  stomachBPPrefab: {fileID: -2342542270155642471, guid: 7484f63c2185d704783afbb9b65246ee, type: 3}
+  lungsBPPrefab: {fileID: -7506690235330480180, guid: 95ee53ab886f01941b0556ee068200bc, type: 3}
+  skinBPPrefab: {fileID: 2337206074046340723, guid: 4e8325d0b661f0042a583d0f19004e1f, type: 3}
+  heartBPPrefab: {fileID: 4360907063467979371, guid: ed55964818edb994c961e93d1505e4a6, type: 3}
+  brain: {fileID: 0}
+  stomach: {fileID: 0}
+  lungs: {fileID: 0}
+  skin: {fileID: 0}
+  heart: {fileID: 0}
+--- !u!61 &-471311865446099475
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656536476824285404}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.49, y: 0.34}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.49, y: 0.34}
+  m_EdgeRadius: 0
